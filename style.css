@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #c70cd8, #2f2f2f);
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 20px;
+}
+
+.carta {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    max-width: 600px;
+    border-radius: 20px;
+    text-align: center;
+    animation: aparecer 1.5s ease;
+}
+
+h1 {
+    color: #c9184a;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.nombre {
+    color: #a4133c;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ❤️ CORAZÓN */
+.heart {
+    width: 180px;
+    height: 180px;
+    background-color: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: heart 0.8s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@keyframes heart {
+    0% { transform: rotate(-45deg) scale(1.05); }
+    50% { transform: rotate(-45deg) scale(1); }
+    100% { transform: rotate(-45deg) scale(0.95); }
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 180px;
+    height: 180px;
+    background: #f20044;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50%;
+}
+
+.heart::after {
+    right: -50%;
+}
+
+.heart p {
+    transform: rotate(45deg);
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+/* 📱 RESPONSIVE PARA CELULAR */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .heart {
+        transform: rotate(-45deg) scale(0.9);
+    }
+}
