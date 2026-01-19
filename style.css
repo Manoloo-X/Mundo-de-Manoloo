@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(135deg, #c70cd8, #2f2f2f);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif;
+}
+
+.carta {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: aparecer 2s ease;
+}
+
+h1 {
+    color: #c9184a;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.nombre {
+    color: #a4133c;
+    font-size: 1.6em;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-width: 100vh;
+    align-items: center;
+    justify-content: center;
+background-color: #0b1522;
+
+}
+
+.heart {
+    height: 200px;
+    margin-left: 150px;
+    width: 200px;
+    background-color: #f20044;
+    position: relative;
+transform: rotate(-45deg);
+box-shadow: 10px 10px 90px #f20044;
+animation: heart 0.6s linear infinite;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+text-align: center;
+padding: 10px;  
+
+}
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+
+    }
+80%{
+    transform: rotate(-45deg) scale(1.0);
+}
+100%{
+    transform: rotate(-45deg) scale(0.8);
+
+}
+
+
+
+
+
+}
+
+.heart p {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    transform: rotate(45deg) translate(0, -50px);
+
+
+}
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #f20044;
+    top: -50%;
+    border-radius: 100px;
+    box-shadow: -10px -10px 90px #f20044;
+
+}
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #f20044;
+    right: -50%;
+    border-radius: 100px;
+    box-shadow: 10px 10px 90px #f20044;
+    
+}
